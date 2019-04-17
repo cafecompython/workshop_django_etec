@@ -13,9 +13,9 @@ Nesse workshop foram trabalhados:
 7 - Funções e Classes\
 
 ## Django
-1 - Criando um Projeto\
- + Entendendo a estrutura de um Projeto\
- + Explorando o arquivo settings.py\
+1 - Criando um Projeto
+ + Entendendo a estrutura de um Projeto
+ + Explorando o arquivo settings.py
 
 2 - O paradigma Models - Views - Template (MVT)\
 3 - Criando uma Aplicação\
