@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+
+{%block title%}<title>Django Workshop na Etec</title> {%endblock%}
+
+{% block content%}
+<!-- Conteúdo da Página -->
+<div class="container">
+    <!-- Header -->
+    <header class="jumbotron my-4">
+        <h1 class="display-3">Olá, Mundo!</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt
+            possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam
+            repellat.</p>
+    </header>
+
+    <!-- Postagens -->
+    <div class="row text-center">
+
+        {% for post in posts%}
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" style="height: 30vh" src="{{post.imagem.url}}"
+                    alt="Photo by Austin Distel on Unsplash">
+                <div class="card-body">
+                    <h4 class="card-title">{{post.post_titulo}}</h4>
+                    <p class="card-text">{{post.post_texto|truncatewords:12}}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'blog:postagem' pk=post.pk %}" class="btn btn-primary">Leia mais!</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</div>
+{% endblock %}

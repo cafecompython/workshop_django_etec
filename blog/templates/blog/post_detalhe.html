@@ -1,0 +1,74 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} <title>Meu Blog - {{post.post_titulo}}</title> {% endblock %}
+
+
+{% block content%}
+<!-- Conteúdo da Página -->
+<div class="container">
+  <div class="row">
+    <!-- Postagem -->
+    <div class="col-lg-8">
+      <!-- Título -->
+      <h1 class="mt-4">{{post.post_titulo}}</h1>
+      <!-- Autor -->
+      <p class="lead">
+        by
+        <a href="#">{{post.autor}}</a>
+      </p>
+
+      <hr>
+
+      <!-- Data/Hora -->
+      <p>{{post.data_publicacao}}</p>
+
+      <hr>
+
+      <!-- Imagem -->
+      <img class="img-fluid rounded img-detalhe" src="{{post.imagem.url}}" alt="Photo from Codementor.io">
+
+      <hr>
+
+      <!-- Texto -->
+      <p class="lead">{{post.post_texto}}</p>
+      <!-- Fim do Texto -->
+      <hr>
+      <!-- Fim da Postagem -->
+
+      <!-- Formulário de Comentário -->
+      <div class="card my-4">
+        <h5 class="card-header">Deixe um comentário:</h5>
+        <div class="card-body">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              {{form.as_p}}
+              <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Fim do Formulário de Comentário -->
+    <hr>
+    <!-- Comentários -->
+    {%for com in coments%}
+    <div class="media mb-4">
+
+      <div class="media-body">
+
+        <h5 class="mt-0">{{com.coment_autor}} <i class="far fa-comment"></i></h5> <p>{{com.coment_publicacao}}</p>
+        {{com.coment_texto}}
+      </div>
+    </div>
+    {%endfor%}
+    <!-- Fim de Comentários -->
+
+
+  </div>
+
+</div>
+<!-- /.row -->
+
+</div>
+{% endblock %}
+<!-- Fim do Conteúdo -->
