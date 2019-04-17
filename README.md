@@ -14,8 +14,8 @@ Nesse workshop foram trabalhados:
 
 ## Django
 1 - Criando um Projeto\
---- Entendendo a estrutura de um Projeto\
---- Explorando o arquivo settings.py\
+... Entendendo a estrutura de um Projeto\
+... Explorando o arquivo settings.py\
 2 - O paradigma Models - Views - Template (MVT)\
 3 - Criando uma Aplicação\
 4 - Manipulando Templates\
