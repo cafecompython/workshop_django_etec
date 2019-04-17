@@ -10,7 +10,7 @@ Nesse workshop foram trabalhados:
 4 - Coleções\
 5 - Estruturas de Decisão\
 6 - Laços de Repetição\
-7 - Funções e Classes\
+7 - Funções e Classes
 
 ## Django
 1 - Criando um Projeto
