@@ -1,0 +1,19 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+ body {
+  padding-top: 56px;
+}
+
+.card-img-top{
+  height: 40vh;
+  object-fit: cover;
+}
+
+.img-detalhe{
+  width: 100vw;
+  height: 35vw;
+  object-fit: cover;
+}
